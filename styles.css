@@ -169,10 +169,13 @@ body {
 }
 
 .hero-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 40px;
-    opacity: 0.8;
+    opacity: 0.9;
     line-height: 1.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-buttons {
@@ -631,12 +634,23 @@ body {
         font-size: 1.3rem;
     }
 
+    .hero-description {
+        font-size: 0.95rem;
+        padding: 0 15px;
+    }
+
     .section-title {
         font-size: 2rem;
     }
 
     .gallery-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .form-row {
@@ -655,11 +669,222 @@ body {
         text-align: center;
         padding: 25px 30px;
     }
+
+    .stats {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 30px;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 15px 60px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .gallery-grid {
+        gap: 15px;
+    }
+
+    .nav-logo {
+        font-size: 1.3rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Lightbox Styles */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    cursor: pointer;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes lightboxZoom {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.lightbox-content {
+    cursor: default;
+}
+
+.lightbox-info {
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.lightbox-info p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-weight: 300;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: rotate(90deg);
+}
+
+/* Lightbox Mobile Styles */
+@media (max-width: 768px) {
+    .lightbox-content {
+        max-width: 95% !important;
+    }
+    
+    .lightbox-info {
+        position: relative;
+        bottom: auto;
+        margin-top: 15px;
+        padding: 15px;
+    }
+    
+    .lightbox-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .lightbox-info p {
+        font-size: 0.9rem;
+    }
+    
+    .lightbox-close {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    .lightbox-close:hover {
+        background: rgba(0, 0, 0, 0.7);
+    }
 }
 
 @media (max-width: 480px) {
+    .lightbox-overlay {
+        padding: 20px;
+    }
+    
+    .lightbox-content {
+        max-width: 100% !important;
+    }
+    
+    .lightbox-content img {
+        border-radius: 10px !important;
+        max-height: 70vh !important;
+    }
+    
+    .lightbox-info {
+        margin-top: 10px;
+        padding: 12px;
+    }
+    
+    .lightbox-info h3 {
+        font-size: 1rem;
+    }
+    
+    .lightbox-info p {
+        font-size: 0.85rem;
+    }
+    
+    .lightbox-close {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+        top: 5px;
+        right: 5px;
+    }
+    
+    /* General mobile adjustments */
     .navbar {
         width: 95%;
+        top: 10px;
     }
 
     .nav-container {
@@ -667,28 +892,73 @@ body {
     }
 
     .nav-logo {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    .hero {
+        padding: 80px 10px 50px;
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        padding: 0 10px;
     }
 
     .hero-buttons {
         flex-direction: column;
         width: 100%;
+        gap: 15px;
     }
 
     .btn {
         width: 100%;
+        padding: 12px 25px;
+        font-size: 0.95rem;
     }
 
     .stat-item h3 {
         font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 1.2rem;
+    }
+
+    .gallery-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .footer-content {
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+        font-size: 1.1rem;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 }
 

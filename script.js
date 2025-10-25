@@ -122,8 +122,8 @@ if (contactForm) {
             animation: fadeIn 0.3s ease-out;
         `;
         alertDiv.innerHTML = `
-            <h3 style="margin-bottom: 15px; font-size: 1.8rem;">Thank You!</h3>
-            <p style="margin-bottom: 20px; opacity: 0.9;">Your message has been sent successfully. We'll get back to you soon!</p>
+            <h3 style="margin-bottom: 15px; font-size: 1.8rem;">¡Gracias!</h3>
+            <p style="margin-bottom: 20px; opacity: 0.9;">Tu mensaje ha sido enviado exitosamente. ¡Nos pondremos en contacto pronto!</p>
             <button onclick="this.parentElement.remove()" style="
                 background: rgba(255, 255, 255, 0.25);
                 border: 2px solid rgba(255, 255, 255, 0.3);
@@ -134,7 +134,7 @@ if (contactForm) {
                 font-weight: 600;
                 font-size: 1rem;
                 transition: all 0.3s ease;
-            " onmouseover="this.style.background='rgba(255, 255, 255, 0.35)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.25)'">Close</button>
+            " onmouseover="this.style.background='rgba(255, 255, 255, 0.35)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.25)'">Cerrar</button>
         `;
         
         document.body.appendChild(alertDiv);

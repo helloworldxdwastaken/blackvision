@@ -1,6 +1,10 @@
 # BlackVision Studios Portfolio Website
 
-A modern, glassmorphism-styled portfolio website for BlackVision Studios featuring photography and videography galleries.
+A modern, glassmorphism-styled portfolio website for BlackVision Studios specializing in Quinceañera photography and business photography for bars, cafes, and restaurants.
+
+## 🌟 Dynamic Image Loading
+
+This website automatically loads images from your `footage` folder! Just add your photos and they'll appear on the site.
 
 ## Features
 
@@ -8,7 +12,8 @@ A modern, glassmorphism-styled portfolio website for BlackVision Studios featuri
 - **Glassmorphism Design**: Entire website uses glass-style aesthetics throughout
 - **Responsive Design**: Fully responsive layout that works on all devices
 - **Smooth Animations**: Scroll-based animations and transitions
-- **Interactive Gallery**: Photo and video galleries with hover effects
+- **15 Years Gallery**: Dedicated Quinceañera photography section with cultural sensitivity
+- **Business Gallery**: Bar, cafe, drink, and restaurant photography showcase
 - **Contact Form**: Functional contact form with custom glass-styled alerts
 - **Modern UI/UX**: Beautiful gradient backgrounds and smooth interactions
 
@@ -32,12 +37,34 @@ A modern, glassmorphism-styled portfolio website for BlackVision Studios featuri
 └── README.md       # Project documentation
 ```
 
-## How to Use
+## 🚀 Quick Start
 
-1. Open `index.html` in a modern web browser
-2. Navigate through sections using the floating navbar
-3. View photography and videography portfolios
-4. Contact form is ready for integration with a backend service
+### 1. Add Your Images
+Place your photos in the `footage` folder:
+```
+footage/
+├── 15-years/     (Quinceañera photos)
+│   ├── ceremonia/
+│   ├── vestido/
+│   └── ...
+└── business/     (Business photos)
+    ├── cocktails/
+    ├── bars/
+    └── ...
+```
+
+### 2. Run a Local Server
+```bash
+# Using Python 3
+python3 -m http.server 8000
+
+# Then open: http://localhost:8000
+```
+
+### 3. View Your Portfolio
+Navigate through sections using the floating navbar - your images will load automatically!
+
+📖 **See SETUP-INSTRUCTIONS.md for detailed setup guide in Spanish**
 
 ## Customization
 
