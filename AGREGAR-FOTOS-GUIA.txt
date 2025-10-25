@@ -1,0 +1,159 @@
+╔═══════════════════════════════════════════════════════════╗
+║         CÓMO AGREGAR NUEVAS FOTOS - GUÍA SIMPLE          ║
+╚═══════════════════════════════════════════════════════════╝
+
+📸 SISTEMA SIMPLIFICADO - SIN CÓDIGO DINÁMICO
+
+✅ TUS FOTOS AHORA ESTÁN DIRECTAMENTE EN EL HTML
+✅ NO hay scripts que escanean carpetas
+✅ GitHub Pages 100% compatible
+✅ Carga más rápida
+
+🎯 PARA AGREGAR NUEVA FOTO:
+
+1️⃣ OPTIMIZA LA FOTO (LEE: OPTIMIZAR-FOTOS.txt)
+   → Usa TinyPNG.com
+   → Máximo 500KB por foto
+
+2️⃣ SUBE LA FOTO A LA CARPETA CORRECTA
+   Para XV Años: footage/15/[nombre-evento]/
+   Para Negocios: footage/business/[nombre-negocio]/
+
+3️⃣ EDITA index.html
+
+   Busca la sección correspondiente:
+   - Línea ~59: XV Años (fifteen)
+   - Línea ~98: Negocios (business)
+
+4️⃣ COPIA Y PEGA ESTE BLOQUE:
+
+   Para XV Años:
+   ```
+   <div class="gallery-item glass-card" onclick="openLightbox('footage/15/TuEvento/foto.jpeg', 'Nombre - XV Años', 'Descripción')">
+       <div class="gallery-image">
+           <img src="footage/15/TuEvento/foto.jpeg" alt="Nombre XV Años" loading="lazy">
+       </div>
+       <div class="gallery-overlay">
+           <h3>Nombre - XV Años</h3>
+           <p>Descripción</p>
+       </div>
+   </div>
+   ```
+
+   Para Negocios:
+   ```
+   <div class="gallery-item glass-card" onclick="openLightbox('footage/business/TuNegocio/foto.jpeg', 'Nombre Negocio', 'Descripción')">
+       <div class="gallery-image">
+           <img src="footage/business/TuNegocio/foto.jpeg" alt="Nombre Negocio" loading="lazy">
+       </div>
+       <div class="gallery-overlay">
+           <h3>Nombre Negocio</h3>
+           <p>Descripción</p>
+       </div>
+   </div>
+   ```
+
+5️⃣ PERSONALIZA:
+   - Cambia la ruta de la foto (2 lugares)
+   - Cambia el título
+   - Cambia la descripción
+
+6️⃣ SUBE A GITHUB:
+   ```
+   git add .
+   git commit -m "Agregada nueva foto"
+   git push
+   ```
+
+📝 EJEMPLO COMPLETO:
+
+ANTES (vacío):
+```html
+<div class="gallery-grid">
+    <!-- Aquí van tus fotos -->
+</div>
+```
+
+DESPUÉS (con foto):
+```html
+<div class="gallery-grid">
+    <div class="gallery-item glass-card" onclick="openLightbox('footage/15/Maria/foto1.jpeg', 'María - XV Años', 'Celebración especial')">
+        <div class="gallery-image">
+            <img src="footage/15/Maria/foto1.jpeg" alt="María XV Años" loading="lazy">
+        </div>
+        <div class="gallery-overlay">
+            <h3>María - XV Años</h3>
+            <p>Celebración especial</p>
+        </div>
+    </div>
+</div>
+```
+
+⚠️ IMPORTANTE:
+
+1. La ruta de la foto aparece 2 veces:
+   - En onclick="openLightbox(...)"
+   - En <img src="...">
+   
+   ¡Deben ser IDÉNTICAS!
+
+2. Respeta las comillas ' ' exactamente
+
+3. No olvides loading="lazy" para carga rápida
+
+4. Mantén el mismo formato para todas
+
+🔧 ERRORES COMUNES:
+
+❌ Ruta incorrecta:
+   src="Buena Vida/foto.jpg"  (falta footage/business/)
+
+✅ Ruta correcta:
+   src="footage/business/Buena Vida/foto.jpg"
+
+❌ Comillas mal cerradas:
+   onclick="openLightbox('foto.jpg', 'Título", 'Desc')">
+
+✅ Comillas correctas:
+   onclick="openLightbox('foto.jpg', 'Título', 'Desc')">
+
+💡 TIPS:
+
+• Agrupa fotos del mismo evento
+• Mantén nombres descriptivos
+• Optimiza TODAS las fotos primero
+• Haz commit después de agregar varias
+
+📂 ESTRUCTURA RECOMENDADA:
+
+footage/
+├── 15/
+│   ├── Maria-Rodriguez/
+│   │   ├── foto1.jpg
+│   │   ├── foto2.jpg
+│   │   └── foto3.jpg
+│   └── Ana-Lopez/
+│       └── foto1.jpg
+└── business/
+    ├── Bar-Moderno/
+    │   ├── foto1.jpg
+    │   └── foto2.jpg
+    └── Cafe-Central/
+        └── foto1.jpg
+
+🎯 VENTAJAS DEL NUEVO SISTEMA:
+
+✅ NO necesitas JavaScript complejo
+✅ Fotos cargan directamente
+✅ 100% compatible con GitHub Pages
+✅ Más rápido
+✅ Más confiable
+✅ Fácil de mantener
+
+═══════════════════════════════════════════════════════════
+
+¿Necesitas ayuda? Revisa el código existente en index.html
+Busca <div class="gallery-item"> y copia el formato
+
+═══════════════════════════════════════════════════════════
+

@@ -162,32 +162,84 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Gallery Item Click - Full Screen View (Optional Enhancement)
-const galleryItems = document.querySelectorAll('.gallery-item');
-galleryItems.forEach(item => {
-    item.addEventListener('click', () => {
-        // Add a subtle scale animation on click
-        item.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-            item.style.transform = 'scale(1)';
-        }, 200);
-    });
-});
+// Lightbox functionality
+function openLightbox(imagePath, title, description) {
+    const existingLightbox = document.getElementById('lightbox');
+    if (existingLightbox) {
+        existingLightbox.remove();
+    }
 
-// Video Play Button Animation
-const videoItems = document.querySelectorAll('.video-item');
-videoItems.forEach(item => {
-    item.addEventListener('click', () => {
-        const playButton = item.querySelector('.play-button');
-        playButton.style.transform = 'scale(0.8)';
-        setTimeout(() => {
-            playButton.style.transform = 'scale(1)';
-        }, 200);
-        
-        // Here you could add code to open a video modal or play the video
-        console.log('Video clicked - implement video player here');
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.className = 'lightbox-overlay';
+    
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'lightbox-content';
+    contentDiv.style.cssText = `
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        animation: lightboxZoom 0.3s ease-out;
+    `;
+    
+    const img = document.createElement('img');
+    img.src = imagePath;
+    img.alt = title;
+    img.style.cssText = `
+        max-width: 100%;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: 15px;
+        box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+        display: block;
+    `;
+    
+    const infoBox = document.createElement('div');
+    infoBox.className = 'lightbox-info';
+    infoBox.innerHTML = `
+        <h3>${title}</h3>
+        <p>${description}</p>
+    `;
+    
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'lightbox-close';
+    closeBtn.innerHTML = '×';
+    closeBtn.onclick = closeLightbox;
+    
+    contentDiv.appendChild(img);
+    contentDiv.appendChild(infoBox);
+    contentDiv.appendChild(closeBtn);
+    lightbox.appendChild(contentDiv);
+    
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
     });
-});
+    
+    document.addEventListener('keydown', handleEscapeKey);
+    document.body.appendChild(lightbox);
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.style.opacity = '0';
+        setTimeout(() => {
+            lightbox.remove();
+            document.body.style.overflow = '';
+            document.removeEventListener('keydown', handleEscapeKey);
+        }, 300);
+    }
+}
+
+function handleEscapeKey(e) {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+}
+
 
 // Add cursor effect (glass circle following cursor)
 const cursor = document.createElement('div');

@@ -9,11 +9,12 @@ Un portafolio moderno y profesional para BlackVision Studios, especializado en f
 - 🎨 Diseño glassmorphism moderno
 - 📱 100% responsive (móvil, tablet, desktop)
 - 🇪🇸 Completamente en español
-- ⚡ Optimizado para GitHub Pages
-- 🖼️ Galerías dinámicas con lightbox
+- ⚡ Optimizado para GitHub Pages (sin dependencias dinámicas)
+- 🖼️ Galerías con lightbox interactivo
 - 🎯 Navbar flotante estilo píldora
 - 💫 Animaciones suaves y elegantes
 - 📸 Dos secciones principales: XV Años y Negocios
+- 🚀 Carga directa de imágenes (sin escaneo de carpetas)
 
 ## 🚀 Cómo Usar
 
