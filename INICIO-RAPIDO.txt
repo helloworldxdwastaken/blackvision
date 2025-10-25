@@ -1,0 +1,125 @@
+╔═══════════════════════════════════════════════════════════╗
+║       BLACKVISION STUDIOS - GUÍA DE INICIO RÁPIDO       ║
+╚═══════════════════════════════════════════════════════════╝
+
+🚀 TU SITIO ESTÁ LISTO PARA GITHUB PAGES
+
+✅ LO QUE YA ESTÁ HECHO:
+
+  ✓ Sitio web completamente en español
+  ✓ Diseño glassmorphism profesional
+  ✓ 100% responsive (móvil y desktop)
+  ✓ Todas tus fotos actuales listadas
+  ✓ Optimizado para GitHub Pages
+  ✓ Lightbox funcional para ver fotos
+
+📋 ARCHIVOS IMPORTANTES:
+
+  index.html          → Tu página web principal
+  images-list.js      → EDITA AQUÍ para agregar fotos
+  styles.css          → Estilos del sitio
+  .nojekyll          → Necesario para GitHub Pages
+  footage/            → Carpeta con tus fotos
+
+🌐 PARA SUBIR A INTERNET (GitHub Pages):
+
+  1. Lee: GITHUB-PAGES-SETUP.md
+  2. Crea cuenta en github.com
+  3. Crea un repositorio nuevo
+  4. Sube todos estos archivos
+  5. Activa GitHub Pages en Settings
+  6. ¡Tu sitio estará en línea!
+
+📸 PARA AGREGAR MÁS FOTOS:
+
+  1. Sube fotos a: footage/15/ o footage/business/
+  2. Edita: images-list.js
+  3. Agrega la información de cada foto
+  4. Sube cambios a GitHub
+  
+  👉 Lee: COMO-AGREGAR-FOTOS.txt para guía detallada
+
+🖥️ PARA VER LOCALMENTE:
+
+  Opción 1: Abre index.html en tu navegador
+  
+  Opción 2: Usa servidor local
+  Terminal:
+    cd "/Users/tokyo/Desktop/untitled folder"
+    python3 -m http.server 8000
+    Abre: http://localhost:8000
+
+🎨 PERSONALIZAR INFORMACIÓN:
+
+  - Email, teléfono, dirección:
+    → Edita index.html (busca "Footer")
+  
+  - Colores del sitio:
+    → Edita styles.css (busca ":root")
+
+📊 FOTOS ACTUALES EN EL SITIO:
+
+  XV Años (15):
+    ✓ 3 fotos de Laura Sinapellido
+  
+  Negocios (business):
+    ✓ 11 fotos de Buena Vida
+    ✓ 1 foto de Piu Bella
+
+🔧 ESTRUCTURA RECOMENDADA:
+
+  Para mantener orden:
+  
+  footage/
+  ├── 15/
+  │   ├── Evento-1/
+  │   ├── Evento-2/
+  │   └── Evento-3/
+  └── business/
+      ├── Negocio-1/
+      ├── Negocio-2/
+      └── Negocio-3/
+
+💡 TIPS:
+
+  • Optimiza tus fotos antes de subir (max 500KB)
+  • Usa nombres de archivo sin espacios
+  • Mantén copias de seguridad de tus fotos
+  • GitHub Pages se actualiza en 2-3 minutos
+
+🆘 AYUDA RÁPIDA:
+
+  ¿Fotos no cargan?
+  → Revisa rutas en images-list.js
+  
+  ¿Sitio no se actualiza?
+  → Espera unos minutos y borra caché
+  
+  ¿Error en GitHub Pages?
+  → Revisa que .nojekyll esté incluido
+  
+  ¿Más dudas?
+  → Lee GITHUB-PAGES-SETUP.md
+
+📚 DOCUMENTACIÓN COMPLETA:
+
+  README.md                 → Info técnica del proyecto
+  GITHUB-PAGES-SETUP.md     → Guía completa de despliegue
+  COMO-AGREGAR-FOTOS.txt    → Cómo agregar fotos paso a paso
+
+═══════════════════════════════════════════════════════════
+
+¡TODO ESTÁ LISTO! Solo falta subirlo a GitHub Pages 🎉
+
+Tu sitio:
+• Es profesional y moderno
+• Funciona en todos los dispositivos
+• Es fácil de actualizar
+• Está optimizado para velocidad
+
+Próximo paso: Lee GITHUB-PAGES-SETUP.md
+
+═══════════════════════════════════════════════════════════
+© 2025 BlackVision Studios
+═══════════════════════════════════════════════════════════
+

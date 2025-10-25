@@ -1,75 +1,91 @@
-# BlackVision Studios Portfolio Website
+# BlackVision Studios - Portfolio
 
-A modern, glassmorphism-styled portfolio website for BlackVision Studios specializing in Quinceañera photography and business photography for bars, cafes, and restaurants.
+Un portafolio moderno y profesional para BlackVision Studios, especializado en fotografía de XV años y negocios (bares, cafés, restaurantes).
 
-## 🌟 Dynamic Image Loading
+🌐 **[Ver Sitio en Vivo](https://TU-USUARIO.github.io/blackvision-portfolio/)**
 
-This website automatically loads images from your `footage` folder! Just add your photos and they'll appear on the site.
+## ✨ Características
 
-## Features
+- 🎨 Diseño glassmorphism moderno
+- 📱 100% responsive (móvil, tablet, desktop)
+- 🇪🇸 Completamente en español
+- ⚡ Optimizado para GitHub Pages
+- 🖼️ Galerías dinámicas con lightbox
+- 🎯 Navbar flotante estilo píldora
+- 💫 Animaciones suaves y elegantes
+- 📸 Dos secciones principales: XV Años y Negocios
 
-- **Floating Pill-Style Navbar**: Glassmorphism navigation bar with shadow effects
-- **Glassmorphism Design**: Entire website uses glass-style aesthetics throughout
-- **Responsive Design**: Fully responsive layout that works on all devices
-- **Smooth Animations**: Scroll-based animations and transitions
-- **15 Years Gallery**: Dedicated Quinceañera photography section with cultural sensitivity
-- **Business Gallery**: Bar, cafe, drink, and restaurant photography showcase
-- **Contact Form**: Functional contact form with custom glass-styled alerts
-- **Modern UI/UX**: Beautiful gradient backgrounds and smooth interactions
+## 🚀 Cómo Usar
 
-## Design Elements
+### Ver Localmente
 
-- Floating navbar with pill shape, shadow, and glass effect
-- Backdrop blur effects for depth
-- Gradient backgrounds
-- Smooth transitions and hover effects
-- Interactive cursor effect
-- Mobile-responsive hamburger menu
-- Beautiful footer with social links
+1. Abre `index.html` en tu navegador, o
+2. Usa un servidor local:
 
-## File Structure
-
-```
-/
-├── index.html      # Main HTML structure
-├── styles.css      # Glassmorphism styling and responsive design
-├── script.js       # Interactive features and animations
-└── README.md       # Project documentation
-```
-
-## 🚀 Quick Start
-
-### 1. Add Your Images
-Place your photos in the `footage` folder:
-```
-footage/
-├── 15-years/     (Quinceañera photos)
-│   ├── ceremonia/
-│   ├── vestido/
-│   └── ...
-└── business/     (Business photos)
-    ├── cocktails/
-    ├── bars/
-    └── ...
-```
-
-### 2. Run a Local Server
 ```bash
-# Using Python 3
 python3 -m http.server 8000
-
-# Then open: http://localhost:8000
+# Abre: http://localhost:8000
 ```
 
-### 3. View Your Portfolio
-Navigate through sections using the floating navbar - your images will load automatically!
+### Subir a GitHub Pages
 
-📖 **See SETUP-INSTRUCTIONS.md for detailed setup guide in Spanish**
+Lee la guía completa en: **[GITHUB-PAGES-SETUP.md](GITHUB-PAGES-SETUP.md)**
 
-## Customization
+**Pasos rápidos:**
+1. Crea un repositorio en GitHub
+2. Sube todos los archivos
+3. Activa GitHub Pages en Settings → Pages
+4. ¡Tu sitio estará en línea en minutos!
 
-### Colors
-Edit CSS variables in `styles.css`:
+## 📸 Agregar Nuevas Fotos
+
+1. Sube tus fotos a la carpeta `footage/15/` o `footage/business/`
+2. Edita el archivo `images-list.js`
+3. Agrega las nuevas fotos siguiendo el formato:
+
+```javascript
+{
+    image: "footage/business/NombreNegocio/foto.jpg",
+    title: "Título",
+    description: "Descripción"
+}
+```
+
+4. Sube los cambios a GitHub
+
+## 📁 Estructura del Proyecto
+
+```
+blackvision-portfolio/
+├── index.html           # Página principal
+├── styles.css           # Estilos glassmorphism
+├── script.js            # Funcionalidad JavaScript
+├── images-list.js       # ⚠️ Edita aquí para agregar fotos
+├── load-gallery.js      # Cargador de galería
+├── .nojekyll           # Requerido para GitHub Pages
+├── .gitignore          # Archivos a ignorar
+└── footage/            # Tus fotografías
+    ├── 15/             # Fotos de XV años
+    │   └── Laura Sinapellido/
+    └── business/       # Fotos de negocios
+        ├── Buena Vida/
+        └── Piu Bella/
+```
+
+## 🎨 Personalización
+
+### Cambiar Información de Contacto
+
+Edita `index.html` en la sección Footer:
+- Email
+- Teléfono
+- Dirección
+- Redes sociales
+
+### Cambiar Colores
+
+Edita `styles.css` en las variables CSS:
+
 ```css
 :root {
     --primary-color: #6366f1;
@@ -77,26 +93,37 @@ Edit CSS variables in `styles.css`:
 }
 ```
 
-### Content
-- Replace gradient placeholders with actual images
-- Update contact information in the footer
-- Modify service descriptions and portfolio items
+## 🛠️ Tecnologías
 
-### Integration
-- Connect the contact form to your email service or backend API
-- Replace video/image placeholders with actual media
-- Add your social media links
+- HTML5
+- CSS3 (Glassmorphism, Grid, Flexbox)
+- JavaScript Vanilla (ES6+)
+- Google Fonts (Inter)
 
-## Browser Support
+## 📱 Compatible con
 
-Works best on modern browsers that support:
-- CSS Backdrop Filter
-- CSS Grid
-- Flexbox
-- ES6 JavaScript
+- ✅ Chrome, Firefox, Safari, Edge (últimas versiones)
+- ✅ iOS Safari
+- ✅ Chrome Mobile
+- ✅ Tablets y dispositivos móviles
+- ✅ GitHub Pages
+- ✅ Cualquier hosting estático
 
-## Credits
+## ⚡ Rendimiento
 
-Designed and developed for BlackVision Studios
-© 2025 BlackVision Studios. All rights reserved.
+- ⚡ Lazy loading de imágenes
+- 🎯 Optimizado para web
+- 📦 Sin dependencias externas
+- 🚀 Carga rápida
 
+## 📄 Licencia
+
+© 2025 BlackVision Studios. Todos los derechos reservados.
+
+## 🆘 Soporte
+
+¿Problemas? Lee el archivo `GITHUB-PAGES-SETUP.md` para soluciones comunes.
+
+---
+
+Hecho con ❤️ para BlackVision Studios
