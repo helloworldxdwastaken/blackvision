@@ -204,10 +204,10 @@ const galleryData = {
     'of-us-coffee': {
         title: 'Of Us Coffee',
         photos: [
-            { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/_DSC4949.webp', caption: 'Café especializado' },
-            { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/_DSC4953.webp', caption: 'Ambiente acogedor' },
-            { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/_DSC4957.webp', caption: 'Espacios de trabajo' },
-            { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/_DSC4961.webp', caption: 'Gastronomía café' },
+            { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/DSC4949.webp', caption: 'Café especializado' },
+            { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/DSC4953.webp', caption: 'Ambiente acogedor' },
+            { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/DSC4957.webp', caption: 'Espacios de trabajo' },
+            { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/DSC4961.webp', caption: 'Gastronomía café' },
             { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/DSC14562.webp', caption: 'Experiencia única' }
         ]
     },
@@ -236,7 +236,7 @@ const galleryData = {
     'el-dray': {
         title: 'El Dray',
         photos: [
-            { src: 'footage/ARTISTAS/El%20Dray/_MG_3662.webp', caption: 'Retrato artístico' }
+            { src: 'footage/ARTISTAS/El%20Dray/MG_3662.webp', caption: 'Retrato artístico' }
         ]
     },
     'yomil': {
