@@ -40,19 +40,29 @@ Lee la guía completa en: **[GITHUB-PAGES-SETUP.md](GITHUB-PAGES-SETUP.md)**
 
 ## 📸 Agregar Nuevas Fotos
 
-1. Sube tus fotos a la carpeta `footage/15/` o `footage/business/`
-2. Edita el archivo `images-list.js`
-3. Agrega las nuevas fotos siguiendo el formato:
+1. **Optimiza tus fotos primero** (ver `OPTIMIZAR-FOTOS.txt`)
+   - Usa [TinyPNG.com](https://tinypng.com)
+   - Máximo 500KB por foto
+   
+2. Sube fotos a `footage/15/` o `footage/business/`
 
-```javascript
-{
-    image: "footage/business/NombreNegocio/foto.jpg",
-    title: "Título",
-    description: "Descripción"
-}
+3. Edita `index.html` y agrega un nuevo bloque:
+
+```html
+<div class="gallery-item glass-card" onclick="openLightbox('footage/business/TuNegocio/foto.jpg', 'Título', 'Descripción')">
+    <div class="gallery-image">
+        <img src="footage/business/TuNegocio/foto.jpg" alt="Título" loading="lazy">
+    </div>
+    <div class="gallery-overlay">
+        <h3>Título</h3>
+        <p>Descripción</p>
+    </div>
+</div>
 ```
 
 4. Sube los cambios a GitHub
+
+📖 **Guía detallada:** `AGREGAR-FOTOS-GUIA.txt`
 
 ## 📁 Estructura del Proyecto
 
