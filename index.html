@@ -20,8 +20,8 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Inicio</a></li>
-                <li><a href="#fifteen" class="nav-link">15 Años</a></li>
                 <li><a href="#business" class="nav-link">Negocios</a></li>
+                <li><a href="#artist" class="nav-link">Artistas</a></li>
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
                 <li><a href="about.html" class="nav-link">Nosotros</a></li>
                 <li><a href="#contact" class="nav-link">Contacto</a></li>
@@ -36,12 +36,16 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="footage/Banner/VIDEO.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">BlackVision Studios</h1>
             <p class="hero-subtitle">Capturando Momentos, Creando Recuerdos</p>
-            <p class="hero-description">Especializados en XV años y fotografía para bares, cafés y marcas</p>
+            <p class="hero-description">Especializados en negocios, artistas y fotografía profesional</p>
             <div class="hero-buttons">
-                <a href="#fifteen" class="btn btn-primary">Ver Portafolio</a>
+                <a href="#business" class="btn btn-primary">Ver Portafolio</a>
                 <a href="#contact" class="btn btn-secondary">Contáctanos</a>
             </div>
         </div>
@@ -51,59 +55,30 @@
         </div>
     </section>
 
-    <!-- 15 Years Section -->
-    <section id="fifteen" class="section">
+    <!-- Nuestros Clientes Section -->
+    <section id="clientes" class="section">
         <div class="container">
-            <div class="section-header glass-card">
-                <h2 class="section-title">Fotografía de Quinceañera</h2>
-                <p class="section-subtitle">Celebrando tus especiales 15 años</p>
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Clientes</h2>
+                <p class="section-subtitle">Empresas que confían en nosotros</p>
             </div>
-            <div class="gallery-grid">
-                <!-- Slide 1: Laura -->
-                <div class="gallery-item glass-card" onclick="openGalleryModal('laura')">
-                    <div class="gallery-image">
-                        <img src="footage/15-years/vestido/Laura/WhatsApp%20Image%202025-10-25%20at%2009.21.17%20(1).jpeg" alt="Laura" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Laura</h3>
-                        <p>3 fotos</p>
-                    </div>
-                </div>
-                <!-- Placeholder slides 2-6 -->
-                <div class="gallery-item glass-card placeholder-item">
-                    <div class="gallery-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Próximamente</h3>
-                        <p>Más eventos</p>
-                    </div>
-                </div>
-                <div class="gallery-item glass-card placeholder-item">
-                    <div class="gallery-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Próximamente</h3>
-                        <p>Más eventos</p>
-                    </div>
-                </div>
-                <div class="gallery-item glass-card placeholder-item">
-                    <div class="gallery-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Próximamente</h3>
-                        <p>Más eventos</p>
-                    </div>
-                </div>
-                <div class="gallery-item glass-card placeholder-item">
-                    <div class="gallery-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Próximamente</h3>
-                        <p>Más eventos</p>
-                    </div>
-                </div>
-                <div class="gallery-item glass-card placeholder-item">
-                    <div class="gallery-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Próximamente</h3>
-                        <p>Más eventos</p>
-                    </div>
+            <div class="clients-carousel">
+                <div class="clients-track">
+                    <img src="footage/logos/BUENA%20VIDA.png" alt="Buena Vida" loading="lazy" class="client-logo">
+                    <img src="footage/logos/BAR%20MILLENNIUM.png" alt="Bar Millennium" loading="lazy" class="client-logo">
+                    <img src="footage/logos/EL%20INGENIO.png" alt="El Ingenio" loading="lazy" class="client-logo">
+                    <img src="footage/logos/VIOR.png" alt="Vior Bar Club" loading="lazy" class="client-logo">
+                    <img src="footage/logos/Coffe%20of%20us.png" alt="Of Us Coffee" loading="lazy" class="client-logo">
+                    <img src="footage/logos/PIU%20BELLA.png" alt="Piu Bella" loading="lazy" class="client-logo">
+                    <img src="footage/logos/CONTAS%20EMPANADAS.png" alt="Contas Empanadas" loading="lazy" class="client-logo">
+                    <!-- Duplicate for seamless loop -->
+                    <img src="footage/logos/BUENA%20VIDA.png" alt="Buena Vida" loading="lazy" class="client-logo">
+                    <img src="footage/logos/BAR%20MILLENNIUM.png" alt="Bar Millennium" loading="lazy" class="client-logo">
+                    <img src="footage/logos/EL%20INGENIO.png" alt="El Ingenio" loading="lazy" class="client-logo">
+                    <img src="footage/logos/VIOR.png" alt="Vior Bar Club" loading="lazy" class="client-logo">
+                    <img src="footage/logos/Coffe%20of%20us.png" alt="Of Us Coffee" loading="lazy" class="client-logo">
+                    <img src="footage/logos/PIU%20BELLA.png" alt="Piu Bella" loading="lazy" class="client-logo">
+                    <img src="footage/logos/CONTAS%20EMPANADAS.png" alt="Contas Empanadas" loading="lazy" class="client-logo">
                 </div>
             </div>
         </div>
@@ -113,57 +88,142 @@
     <section id="business" class="section">
         <div class="container">
             <div class="section-header glass-card">
-                <h2 class="section-title">Fotografía de Negocios</h2>
+                <h2 class="section-title">Negocios</h2>
                 <p class="section-subtitle">Elevando tu marca con visuales impresionantes</p>
             </div>
             <div class="gallery-grid">
                 <!-- Slide 1: Buena Vida -->
                 <div class="gallery-item glass-card" onclick="openGalleryModal('buena-vida')">
                     <div class="gallery-image">
-                        <img src="footage/business/restaurants/Buena%20Vida/WhatsApp%20Image%202025-10-25%20at%2009.21.15%20(2).jpeg" alt="Buena Vida" loading="lazy">
+                        <img src="footage/NEGOCIOS/Restaurante/Buena%20Vida/DSC05827.webp" alt="Buena Vida" loading="lazy">
                     </div>
                     <div class="gallery-overlay">
                         <h3>Buena Vida</h3>
-                        <p>10 fotos</p>
+                        <p>5 fotos</p>
                     </div>
                 </div>
-                <!-- Slide 2: Piu Bella -->
+                <!-- Slide 2: Bar Millennium -->
+                <div class="gallery-item glass-card" onclick="openGalleryModal('bar-millennium')">
+                    <div class="gallery-image">
+                        <img src="footage/NEGOCIOS/BARES/Bar%20Millennium/4.webp" alt="Bar Millennium" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Bar Millennium</h3>
+                        <p>4 fotos</p>
+                    </div>
+                </div>
+                <!-- Slide 3: El Ingenio -->
+                <div class="gallery-item glass-card" onclick="openGalleryModal('el-ingenio')">
+                    <div class="gallery-image">
+                        <img src="footage/NEGOCIOS/Centros%20Multiculturales/El%20Ingenio/DSC06595~1.jpg" alt="El Ingenio" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>El Ingenio</h3>
+                        <p>4 fotos</p>
+                    </div>
+                </div>
+                <!-- Slide 4: Vior Bar Club -->
+                <div class="gallery-item glass-card" onclick="openGalleryModal('vior-bar')">
+                    <div class="gallery-image">
+                        <img src="footage/NEGOCIOS/BARES/Vior%20Bar%20Club/33.webp" alt="Vior Bar Club" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Vior Bar Club</h3>
+                        <p>4 fotos</p>
+                    </div>
+                </div>
+                <!-- Slide 5: Of Us Coffee -->
+                <div class="gallery-item glass-card" onclick="openGalleryModal('of-us-coffee')">
+                    <div class="gallery-image">
+                        <img src="footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/_DSC4949.webp" alt="Of Us Coffee" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Of Us Coffee</h3>
+                        <p>5 fotos</p>
+                    </div>
+                </div>
+                <!-- Slide 6: Piu Bella -->
                 <div class="gallery-item glass-card" onclick="openGalleryModal('piu-bella')">
                     <div class="gallery-image">
-                        <img src="footage/business/branding/Piu%20Bella/WhatsApp%20Image%202025-10-25%20at%2009.21.16%20(3).jpeg" alt="Piu Bella" loading="lazy">
+                        <img src="footage/NEGOCIOS/PIU%20BELLA/DSC04878~1.jpg" alt="Piu Bella" loading="lazy">
                     </div>
                     <div class="gallery-overlay">
                         <h3>Piu Bella</h3>
+                        <p>3 fotos</p>
+                    </div>
+                </div>
+                <!-- Slide 7: Contas Empanadas -->
+                <div class="gallery-item glass-card" onclick="openGalleryModal('contas-empanadas')">
+                    <div class="gallery-image">
+                        <img src="footage/NEGOCIOS/BARES/Contas%20Empanadas/3.webp" alt="Contas Empanadas" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Contas Empanadas</h3>
+                        <p>2 fotos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artist Section -->
+    <section id="artist" class="section">
+        <div class="container">
+            <div class="section-header glass-card">
+                <h2 class="section-title">Artistas</h2>
+                <p class="section-subtitle">Capturando la esencia artística y creativa</p>
+            </div>
+            <div class="gallery-grid">
+                <!-- Slide 1: Charly y Johayron -->
+                <div class="gallery-item glass-card" onclick="openGalleryModal('charly-johayron')">
+                    <div class="gallery-image">
+                        <img src="footage/ARTISTAS/Charly%20y%20Johayron/39.webp" alt="Charly y Johayron" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Charly y Johayron</h3>
+                        <p>2 fotos</p>
+                    </div>
+                </div>
+                <!-- Slide 2: El Dray -->
+                <div class="gallery-item glass-card" onclick="openGalleryModal('el-dray')">
+                    <div class="gallery-image">
+                        <img src="footage/ARTISTAS/El%20Dray/_MG_3662.webp" alt="El Dray" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>El Dray</h3>
                         <p>1 foto</p>
                     </div>
                 </div>
-                <!-- Placeholder slides 3-6 -->
+                <!-- Slide 3: Yomil -->
+                <div class="gallery-item glass-card" onclick="openGalleryModal('yomil')">
+                    <div class="gallery-image">
+                        <img src="footage/ARTISTAS/Yomil/24.webp" alt="Yomil" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Yomil</h3>
+                        <p>2 fotos</p>
+                    </div>
+                </div>
+                <!-- Placeholder slides 4-6 -->
+                <div class="gallery-item glass-card placeholder-item">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="gallery-overlay">
+                        <h3>Próximamente</h3>
+                        <p>Más artistas</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card placeholder-item">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <div class="gallery-overlay">
+                        <h3>Próximamente</h3>
+                        <p>Más artistas</p>
+                    </div>
+                </div>
                 <div class="gallery-item glass-card placeholder-item">
                     <div class="gallery-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
                     <div class="gallery-overlay">
                         <h3>Próximamente</h3>
-                        <p>Más clientes</p>
-                    </div>
-                </div>
-                <div class="gallery-item glass-card placeholder-item">
-                    <div class="gallery-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Próximamente</h3>
-                        <p>Más clientes</p>
-                    </div>
-                </div>
-                <div class="gallery-item glass-card placeholder-item">
-                    <div class="gallery-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Próximamente</h3>
-                        <p>Más clientes</p>
-                    </div>
-                </div>
-                <div class="gallery-item glass-card placeholder-item">
-                    <div class="gallery-image" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Próximamente</h3>
-                        <p>Más clientes</p>
+                        <p>Más artistas</p>
                     </div>
                 </div>
             </div>
@@ -201,59 +261,62 @@
                             <polyline points="9 22 9 12 15 12 15 22"></polyline>
                         </svg>
                     </div>
-                    <h3>Fotografía de Bares & Restaurantes</h3>
-                    <p>Mostramos la esencia de tu negocio con fotos que atraen clientes y destacan tu marca.</p>
+                    <h3>Fotografía de Negocios</h3>
+                    <p>Mostramos la esencia de tu negocio con fotos que atraen clientes y destacan tu marca. Especializados en bares, restaurantes, cafés y espacios comerciales.</p>
                     <ul class="service-features">
-                        <li>Fotografía de platillos</li>
+                        <li>Fotografía de platillos y bebidas</li>
                         <li>Ambiente e interiores</li>
-                        <li>Cócteles y bebidas</li>
+                        <li>Cócteles y productos</li>
                         <li>Contenido para redes sociales</li>
+                        <li>Branding visual completo</li>
                     </ul>
                 </div>
                 <div class="service-card glass-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                            <line x1="6" y1="1" x2="6" y2="4"></line>
-                            <line x1="10" y1="1" x2="10" y2="4"></line>
-                            <line x1="14" y1="1" x2="14" y2="4"></line>
+                            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
+                            <circle cx="12" cy="13" r="3"></circle>
                         </svg>
                     </div>
-                    <h3>Fotografía de Cafés</h3>
-                    <p>Capturamos la atmósfera acogedora de tu café con fotos que invitan a visitar.</p>
+                    <h3>Filmmaker & Editor</h3>
+                    <p>Creación y edición de videos profesionales para promoción, eventos y contenido digital.</p>
                     <ul class="service-features">
-                        <li>Espacios interiores</li>
-                        <li>Productos y menú</li>
-                        <li>Estilo de vida</li>
-                        <li>Branding visual</li>
+                        <li>Videos promocionales</li>
+                        <li>Edición profesional</li>
+                        <li>Contenido para redes</li>
+                        <li>Post-producción completa</li>
                     </ul>
                 </div>
                 <div class="service-card glass-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                            <path d="M2 17l10 5 10-5"></path>
-                            <path d="M2 12l10 5 10-5"></path>
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                         </svg>
                     </div>
-                    <h3>Fotografía de Marca</h3>
-                    <p>Construimos la identidad visual de tu negocio con fotografía profesional de alto impacto.</p>
+                    <h3>Diseñador</h3>
+                    <p>Diseño gráfico y visual para fortalecer la identidad de marca de tu negocio.</p>
                     <ul class="service-features">
-                        <li>Fotografía corporativa</li>
-                        <li>Productos y servicios</li>
-                        <li>Contenido publicitario</li>
+                        <li>Diseño de logos</li>
+                        <li>Material gráfico</li>
+                        <li>Identidad visual</li>
                         <li>Branding completo</li>
                     </ul>
                 </div>
             </div>
             <div class="cta-buttons">
-                <a href="tel:+5353088558" class="btn btn-primary btn-large">
-                    <span class="btn-icon">📞</span>
+                <a href="tel:+5354273263" class="btn btn-primary btn-large">
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
                     Llamar Ahora
                 </a>
                 <a href="#contact" class="btn btn-secondary btn-large">
-                    <span class="btn-icon">📅</span>
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
                     Reservar Sesión
                 </a>
             </div>
@@ -294,24 +357,14 @@
                 <h3>BlackVision Studios</h3>
                 <p>Creando historias visuales que inspiran y cautivan.</p>
                 <div class="social-links">
-                    <a href="#" class="social-link">
+                    <a href="https://www.facebook.com/profile.php?id=61550687443852" target="_blank" rel="noopener noreferrer" class="social-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="https://www.instagram.com/black_vision_std" target="_blank" rel="noopener noreferrer" class="social-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                         </svg>
                     </a>
                 </div>
@@ -319,11 +372,11 @@
             <div class="footer-section">
                 <h4>Servicios</h4>
                 <ul>
-                    <li><a href="#fifteen">Fotografía de Quinceañera</a></li>
-                    <li><a href="#business">Fotografía de Bares & Restaurantes</a></li>
-                    <li><a href="#business">Bebidas & Cócteles</a></li>
-                    <li><a href="#business">Cafés & Espacios Interiores</a></li>
-                    <li><a href="#business">Fotografía de Marca</a></li>
+                    <li><a href="#business">Negocios</a></li>
+                    <li><a href="#artist">Artistas</a></li>
+                    <li><a href="#servicios">Filmmaker & Editor</a></li>
+                    <li><a href="#servicios">Diseñador</a></li>
+                    <li><a href="#servicios">Fotografía Profesional</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -332,15 +385,15 @@
                     <li><a href="about.html">Sobre Nosotros</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#fifteen">Portafolio</a></li>
-                    <li><a href="tel:+5353088558">Llamar</a></li>
+                    <li><a href="tel:+5354273263">Llamar</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Información de Contacto</h4>
                 <ul>
-                    <li>info@blackvision.com</li>
-                    <li><a href="tel:+5353088558">+53 53088558</a></li>
+                    <li>vegadeivi04@gmail.com</li>
+                    <li><a href="tel:+5354273263">+53 5 4273263</a></li>
                     <li>359 entre Trinidad y San Germán</li>
                     <li>Santiago de Cuba, Cuba</li>
                 </ul>

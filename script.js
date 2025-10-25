@@ -162,6 +162,146 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Gallery data - all photos organized by client/event
+const galleryData = {
+    'buena-vida': {
+        title: 'Buena Vida - Restaurante',
+        photos: [
+            { src: 'footage/NEGOCIOS/Restaurante/Buena%20Vida/DSC05827.webp', caption: 'Ambiente del restaurante' },
+            { src: 'footage/NEGOCIOS/Restaurante/Buena%20Vida/DSC05832.webp', caption: 'Interior y decoración' },
+            { src: 'footage/NEGOCIOS/Restaurante/Buena%20Vida/DSC05844.webp', caption: 'Espacios gastronómicos' },
+            { src: 'footage/NEGOCIOS/Restaurante/Buena%20Vida/DSC05859.webp', caption: 'Detalles culinarios' },
+            { src: 'footage/NEGOCIOS/Restaurante/Buena%20Vida/DSC05860.webp', caption: 'Presentación de platos' }
+        ]
+    },
+    'bar-millennium': {
+        title: 'Bar Millennium',
+        photos: [
+            { src: 'footage/NEGOCIOS/BARES/Bar%20Millennium/4.webp', caption: 'Ambiente nocturno' },
+            { src: 'footage/NEGOCIOS/BARES/Bar%20Millennium/5.webp', caption: 'Barra principal' },
+            { src: 'footage/NEGOCIOS/BARES/Bar%20Millennium/7.webp', caption: 'Espacios sociales' },
+            { src: 'footage/NEGOCIOS/BARES/Bar%20Millennium/9.webp', caption: 'Iluminación y ambiente' }
+        ]
+    },
+    'el-ingenio': {
+        title: 'El Ingenio - Centro Cultural',
+        photos: [
+            { src: 'footage/NEGOCIOS/Centros%20Multiculturales/El%20Ingenio/DSC06595~1.jpg', caption: 'Espacios culturales' },
+            { src: 'footage/NEGOCIOS/Centros%20Multiculturales/El%20Ingenio/DSC06597~1.jpg', caption: 'Arquitectura cultural' },
+            { src: 'footage/NEGOCIOS/Centros%20Multiculturales/El%20Ingenio/DSC06603~1.jpg', caption: 'Ambiente artístico' },
+            { src: 'footage/NEGOCIOS/Centros%20Multiculturales/El%20Ingenio/DSC06605~1.jpg', caption: 'Espacios de expresión' }
+        ]
+    },
+    'vior-bar': {
+        title: 'Vior Bar Club',
+        photos: [
+            { src: 'footage/NEGOCIOS/BARES/Vior%20Bar%20Club/33.webp', caption: 'Club nocturno' },
+            { src: 'footage/NEGOCIOS/BARES/Vior%20Bar%20Club/36.webp', caption: 'Ambiente VIP' },
+            { src: 'footage/NEGOCIOS/BARES/Vior%20Bar%20Club/4.webp', caption: 'Barra premium' },
+            { src: 'footage/NEGOCIOS/BARES/Vior%20Bar%20Club/6.webp', caption: 'Espacios exclusivos' }
+        ]
+    },
+    'of-us-coffee': {
+        title: 'Of Us Coffee',
+        photos: [
+            { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/_DSC4949.webp', caption: 'Café especializado' },
+            { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/_DSC4953.webp', caption: 'Ambiente acogedor' },
+            { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/_DSC4957.webp', caption: 'Espacios de trabajo' },
+            { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/_DSC4961.webp', caption: 'Gastronomía café' },
+            { src: 'footage/NEGOCIOS/Restaurante/Of%20Us%20Coffe%20Game/DSC14562.webp', caption: 'Experiencia única' }
+        ]
+    },
+    'piu-bella': {
+        title: 'Piu Bella',
+        photos: [
+            { src: 'footage/NEGOCIOS/PIU%20BELLA/DSC04878~1.jpg', caption: 'Estética y belleza' },
+            { src: 'footage/NEGOCIOS/PIU%20BELLA/DSC04892~1.jpg', caption: 'Espacios de bienestar' },
+            { src: 'footage/NEGOCIOS/PIU%20BELLA/DSC04907~1.jpg', caption: 'Ambiente relajante' }
+        ]
+    },
+    'contas-empanadas': {
+        title: 'Contas Empanadas',
+        photos: [
+            { src: 'footage/NEGOCIOS/BARES/Contas%20Empanadas/3.webp', caption: 'Gastronomía tradicional' },
+            { src: 'footage/NEGOCIOS/BARES/Contas%20Empanadas/5.webp', caption: 'Ambiente familiar' }
+        ]
+    },
+    'charly-johayron': {
+        title: 'Charly y Johayron',
+        photos: [
+            { src: 'footage/ARTISTAS/Charly%20y%20Johayron/39.webp', caption: 'Sesión artística' },
+            { src: 'footage/ARTISTAS/Charly%20y%20Johayron/41.webp', caption: 'Expresión creativa' }
+        ]
+    },
+    'el-dray': {
+        title: 'El Dray',
+        photos: [
+            { src: 'footage/ARTISTAS/El%20Dray/_MG_3662.webp', caption: 'Retrato artístico' }
+        ]
+    },
+    'yomil': {
+        title: 'Yomil',
+        photos: [
+            { src: 'footage/ARTISTAS/Yomil/24.webp', caption: 'Sesión musical' },
+            { src: 'footage/ARTISTAS/Yomil/34.webp', caption: 'Expresión artística' }
+        ]
+    }
+};
+
+// Open gallery modal with all photos from a client/event
+function openGalleryModal(galleryId) {
+    const gallery = galleryData[galleryId];
+    if (!gallery) return;
+
+    const modal = document.createElement('div');
+    modal.id = 'gallery-modal';
+    modal.className = 'gallery-modal';
+    
+    let photosHTML = '';
+    gallery.photos.forEach((photo, index) => {
+        photosHTML += `
+            <div class="modal-photo" onclick="openLightbox('${photo.src}', '${gallery.title}', '${photo.caption}')">
+                <img src="${photo.src}" alt="${photo.caption}" loading="lazy">
+                <div class="modal-photo-caption">${photo.caption}</div>
+            </div>
+        `;
+    });
+    
+    modal.innerHTML = `
+        <div class="gallery-modal-content">
+            <div class="gallery-modal-header">
+                <h2>${gallery.title}</h2>
+                <button onclick="closeGalleryModal()" class="modal-close-btn">×</button>
+            </div>
+            <div class="gallery-modal-grid">
+                ${photosHTML}
+            </div>
+        </div>
+    `;
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeGalleryModal();
+        }
+    });
+    
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
+    
+    setTimeout(() => modal.classList.add('active'), 10);
+}
+
+function closeGalleryModal() {
+    const modal = document.getElementById('gallery-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => {
+            modal.remove();
+            document.body.style.overflow = '';
+        }, 300);
+    }
+}
+
 // Lightbox functionality
 function openLightbox(imagePath, title, description) {
     const existingLightbox = document.getElementById('lightbox');
